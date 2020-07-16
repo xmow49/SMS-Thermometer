@@ -1,7 +1,7 @@
 /*---------------------------------------
-|			Termometer SMS				|
-|		    	By Xmow					|			
-|			gammatroniques.fr			|
+|		Termometer SMS		|
+|		    By Xmow		|			
+|		gammatroniques.fr	|
 ----------------------------------------*/
 #include <Arduino.h>
 #include "function.h"
