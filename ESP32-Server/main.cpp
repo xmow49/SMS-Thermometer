@@ -1,18 +1,25 @@
+/*---------------------------------------
+|			Termometer SMS				|
+|		    	By Xmow					|			
+|			gammatroniques.fr			|
+----------------------------------------*/
 #include <Arduino.h>
 #include "function.h"
 
 void setup() {
+	setupScreen();
 	startModem();
 	setupEspNow();
-	
-	Serial.println(formatedTime());
-	Serial.println(formatedDate());
-	Serial.println(dht.readTemperature());
-	
+	setRTC_GSM();
+	delay(1000);
+	displayTemp();
 }
 
 void loop() {
 	loopTemp();
 	loopGSM();
-	delay(2000);
+	sendBatteryAlert();
+	weeklySMS();
+	checkButton();
+	delay(50);
 }
