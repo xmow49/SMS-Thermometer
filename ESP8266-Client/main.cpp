@@ -3,7 +3,5 @@
 void setup() {
 	setupEspNow();
 	sendTemp();
-
 }
-
 void loop() {}
